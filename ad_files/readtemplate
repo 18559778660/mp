@@ -1,0 +1,209 @@
+<!doctype html><html lang="en"><head><title>流量主</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" type="text/css" href="https://wxa.wxs.qq.com/mpweb/delivery/legacy/mpa/beta/css/style-moment-edit-template.5b7682da.css"><link rel="stylesheet" type="text/css" href="//res.wx.qq.com/promotion/res/htmledition/style/webuploader/webuploader.css"><link rel="shortcut icon" href="" innersrc="https://wxa.wxs.qq.com/mpweb/delivery/build/favicon.ico"><link href="" rel="stylesheet" innersrc="https://wxa.wxs.qq.com/mpweb/delivery/build/js/common/vendors.d9495d0429.css"><link href="" rel="stylesheet" innersrc="https://wxa.wxs.qq.com/mpweb/delivery/build/js/common/adui.df9bf0aba9.css"><link href="" rel="stylesheet" innersrc="https://wxa.wxs.qq.com/mpweb/delivery/build/js/applet/index/main.1e7e9b1d6c.css"></head><body><script innersrc="//wxa.wxs.qq.com/mpweb/delivery/legacy/mmad/libs/webuploader/webuploader.min.js"></script><script innersrc="//wxa.wxs.qq.com/mpweb/delivery/res/vendor.eb8c55dde1a560f2cde5.js"></script><script innersrc="//wximg.qq.com/wxp/libs/mpweb/AreaAll_20180919.js"></script><script type="text/javascript" src="" innersrc="https://wxa.wxs.qq.com/mpweb/delivery/build/js/common/vendors.d9495d04294f0b5d659c.js"></script><script type="text/javascript" src="" innersrc="https://wxa.wxs.qq.com/mpweb/delivery/build/js/common/adui.df9bf0aba98d6932e43e.js"></script><script type="text/javascript" src="" innersrc="https://wxa.wxs.qq.com/mpweb/delivery/build/js/applet/index/main.1e7e9b1d6c.js"></script><script type="text/javascript">document.domain = location.host;
+window.isOss = document.domain.includes('mmad.oa.com') || document.domain.includes('mmad.woa.com');
+
+var topDocument;
+var topWindow;
+
+try {
+  topDocument = top.document;
+  topWindow = top.window;
+// 如果报错，说明跨域
+} catch(err) {
+  topDocument = document;
+  topWindow = window;
+}
+
+var mpIFrame = topDocument.getElementById("mpIFrame");
+var container = document.createElement("div");
+var isDaihuo = (topWindow.location.pathname.includes('productpage'));
+container.id = "wxadcontainer";
+var header = document.createElement("div");
+header.id = 'wx_header';
+
+
+if (mpIFrame) {
+  mpIFrame.parentNode.appendChild(header);
+  mpIFrame.parentNode.appendChild(container);
+} else {
+  document.body.appendChild(header);
+  document.body.appendChild(container)
+}
+
+var scripts = document.getElementsByTagName("script");
+var links = document.getElementsByTagName("link");
+for (var i = 0; i < links.length; i++) {
+  var item = links[i];
+  console.log('item.attributes.innersrc=', item.attributes.innersrc);
+  if (item.attributes.innersrc && item.attributes.innersrc.value) {
+    var src = item.attributes.innersrc.value;
+    // if (window.isOss) {
+    //   src = src.replace('../../', '//mmad.oa.com/promotion/res/htmledition/');
+    // } else {
+    //   src = src.replace('../../', '//res.wx.qq.com/promotion/res/htmledition/');
+    // }
+    console.log('src=', src);
+    var tmp = document.createElement("link");
+    tmp.type = "text/css";
+    tmp.rel = "stylesheet";
+    tmp.href = src;
+    topDocument.head.appendChild(tmp);
+  }
+}
+
+var tmpScripts = [];
+var mainScripts = "";
+var hasWebUploader = false;
+var hasMoment = false;
+for (var i = 0; i < scripts.length - 1; i++) {
+  var item = scripts[i];
+  if (i == scripts.length - 2) {
+    mainScripts = item.attributes.innersrc.value;
+    // if (window.isOss) {
+    //   mainScripts = mainScripts.replace('../../', '//mmad.oa.com/promotion/res/htmledition/');
+    // } else {
+    //   mainScripts = mainScripts.replace('../../', '//res.wx.qq.com/promotion/res/htmledition/');
+    // }
+  } else {
+    if (item.attributes.innersrc && item.attributes.innersrc.value) {
+      var script_url = item.attributes.innersrc.value;
+      // if (window.isOss) {
+      //   script_url = script_url.replace('../../', '//mmad.oa.com/promotion/res/htmledition/');
+      // } else {
+      //   script_url = script_url.replace('../../', '//res.wx.qq.com/promotion/res/htmledition/');
+      // }
+      tmpScripts.push(script_url);
+
+      if (item.attributes.innersrc.value.match(/webuploader./)) {
+        hasWebUploader = true;
+      }
+      if (item.attributes.innersrc.value.match(/moment./)) {
+        hasMoment = true;
+      }
+    } else {
+      if (mpIFrame) {
+        var tmp = document.createElement("script");
+        tmp.src = item.src;
+        if (item.src.match(/webuploader./)) {
+          hasWebUploader = true;
+        }
+        if (item.src.match(/moment./)) {
+          hasMoment = true;
+        }
+        topDocument.body.appendChild(tmp);
+      }
+    }
+  }
+}
+
+if (mpIFrame) {
+  var styles = document.getElementsByTagName("link");
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i];
+    var tmp = document.createElement("link");
+    tmp.type = "text/css";
+    tmp.rel = "stylesheet";
+    tmp.href = item.href;
+    topDocument.head.appendChild(tmp);
+  }
+  // 增加适配外层的样式
+  var fixStyles = document.createElement("style");
+  if(isDaihuo) {
+    fixStyles.innerHTML = ''
+  } else {
+    fixStyles.innerHTML = '' +
+      '.body {'+
+        'margin: 0 auto;'+
+      '}'+
+      '.main_bd {'+
+        'padding-bottom: 100px;'+
+        'overflow: visible!important;' +
+      '}'+
+      '.weui-desktop-layout__main__bd.weui-desktop-panel {'+
+        'padding: 0;'+
+        'background: none;'+
+        'border: none;'+
+      '}'+
+      '.weui-desktop-layout_global>.weui-desktop-layout__main>.weui-desktop-layout__main__area>.weui-desktop-layout__main__inner {'+
+        'width: 990px;'+
+      '}'+
+      '.weui-desktop-page_simple .weui-desktop-layout_global>.weui-desktop-layout__main>.weui-desktop-layout__main__area>.weui-desktop-layout__main__inner {'+
+        'width: 1198px'+
+      '}' +
+      '.body.page_simple>.container_box {'+
+        'width: 1198px;' +
+        'margin-left: auto;' +
+        'margin-right: auto;' +
+      '}' + '.page_tips {' +
+      '  position: fixed;' +
+      '  top: 0;' +
+      '  left: 0;' +
+      '  z-index: 10000;' +
+      '}' +
+      '.page_tips .inner {' +
+      '  position: absolute;' +
+      '  left: 50vw;' +
+      '  transform: translateX(-50%);' +
+      '  min-width: 250px;' +
+      '  padding: 5px 30px;' +
+      '  color: #ffffff;' +
+      '}';          
+    }
+  topDocument.head.appendChild(fixStyles);
+}
+
+loadCommonJs = function (js_file) {
+  var element;
+  element = document.createElement("script");
+  element.src = js_file;
+  topDocument.body.appendChild(element);
+
+
+  element.onload = element.onreadystatechange = function () {
+    if (element.ready) {
+      return false;
+    }
+    if (!element.readyState || element.readyState == "loaded" || element.readyState == 'complete') {
+      checkAllJsLoad(js_file);
+    }
+  };
+};
+
+Array.prototype.indexOf = function (val) {
+  for (var i = 0; i < this.length; i++) {
+    if (this[i] == val) return i;
+  }
+  return -1;
+};
+
+Array.prototype.remove = function (val) {
+  var index = this.indexOf(val);
+  if (index > -1) {
+    this.splice(index, 1);
+  }
+};
+
+topWindow.Array.prototype.map = function (cb, context) {
+  var result = [];
+  for (var i = 0, len = this.length; i < len; i++) {
+    result.push(cb.call(context, this[i], i, this));
+  }
+  return result;
+};
+
+checkAllJsLoad = function (js_file) {
+  tmpScripts.remove(js_file);
+  if (tmpScripts.length == 0) {
+    var element = document.createElement("script");
+    element.src = mainScripts;
+    topDocument.body.appendChild(element);
+  }
+};
+
+tmpScripts.forEach(function (js_file) {
+  console.log('js_file=' + js_file);
+  loadCommonJs(js_file);
+});
+
+if (mpIFrame) {
+  mpIFrame.style.display = "none";
+}</script></body></html>
