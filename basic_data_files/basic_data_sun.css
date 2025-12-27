@@ -1,0 +1,39 @@
+@font-face {
+    font-family: WeChatSansStd-Bold;
+    src: url("https://res.wx.qq.com/a/wx_fed/cdn_libs/res/WeChatSans/1.1.0/WeChatSansStd-Bold.ttf");
+}
+
+@font-face {
+    font-family: WeChatSansStd-Light;
+    src: url("https://res.wx.qq.com/a/wx_fed/cdn_libs/res/WeChatSans/1.1.0/WeChatSansStd-Light.ttf");
+}
+
+@font-face {
+    font-family: WeChatSansStd-Medium;
+    src: url("https://res.wx.qq.com/a/wx_fed/cdn_libs/res/WeChatSans/1.1.0/WeChatSansStd-Medium.ttf");
+}
+
+@font-face {
+    font-family: WeChatSansStd-Regular;
+    src: url("https://res.wx.qq.com/a/wx_fed/cdn_libs/res/WeChatSans/1.1.0/WeChatSansStd-Regular.ttf");
+}
+
+@font-face {
+    font-family: WeChatSansSS-Bold;
+    src: url("https://res.wx.qq.com/a/wx_fed/cdn_libs/res/WeChatSans/1.1.0/WeChatSansSS-Bold.ttf");
+}
+
+@font-face {
+    font-family: WeChatSansSS-Light;
+    src: url("https://res.wx.qq.com/a/wx_fed/cdn_libs/res/WeChatSans/1.1.0/WeChatSansSS-Light.ttf");
+}
+
+@font-face {
+    font-family: WeChatSansSS-Medium;
+    src: url("https://res.wx.qq.com/a/wx_fed/cdn_libs/res/WeChatSans/1.1.0/WeChatSansSS-Medium.ttf");
+}
+
+@font-face {
+    font-family: WeChatSansSS-Regular;
+    src: url("https://res.wx.qq.com/a/wx_fed/cdn_libs/res/WeChatSans/1.1.0/WeChatSansSS-Regular.ttf");
+}
