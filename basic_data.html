@@ -30,7 +30,7 @@
   <script type="text/javascript" async="" src="./basic_data_files/evd-web.min.js"></script>
   <script type="text/javascript" async="" src="./basic_data_files/hm-web.min.js"></script>
   <link rel="stylesheet" href="basic_data_files/basic_data.css">
-  <!-- <link rel="stylesheet" href="basic_data_files/mp_index.css"> -->
+  <link rel="stylesheet" href="basic_data_files/mp_index.css">
 </head>
 
 <body>
@@ -56,9 +56,8 @@
             </a><!---->
             <div data-v-106dbde0="" id="menuBar" class="menu_box">
               <dl data-v-106dbde0="" class="menu">
-                <dt data-v-106dbde0="" class="menu_title clickable menu_home"><a data-v-106dbde0=""
-                    href="https://mp.weixin.qq.com/wxamp/index/index?token=1176097902&amp;lang=zh_CN" target="_self"
-                    title="首页">
+                <dt data-v-106dbde0="" class="menu_title clickable menu_home"><a data-v-106dbde0="" href="javascript:;"
+                    data-menu-item="index" title="首页">
                     <div data-v-106dbde0="" class="menu_info"><span data-v-106dbde0=""
                         class="menu_name tab-bar__wrap tab-bar__name">
                         首页
@@ -455,979 +454,103 @@
           </div><!---->
         </div>
         <div pageinfo.frommp="" class="col_main">
-          <div class="col_main_inner">
-
-            <div data-component="index">
-              <div>
-                <div data-v-5bb8d6d1="" data-component="announcementPanel">
-                  <div data-v-5bb8d6d1="" class="mod_default_box update__box">
-                    <div data-v-5bb8d6d1="" class="mod_default_bd grid_line">
-                      <div data-v-5bb8d6d1="" class="index_news_area" style="">
-                        <div data-v-5bb8d6d1="" class="index_news_area_inner">
-                          <div data-v-5bb8d6d1="" class="index_news_item">
-                            <div data-v-5bb8d6d1="" class="index_news_item_left"><img data-v-5bb8d6d1=""
-                                src="./mp_index_files/trumpet_1bc256.svg" alt="" class="index_news_item_trumpet"><a
-                                data-v-5bb8d6d1=""
-                                href="https://mp.weixin.qq.com/wxopen/announce?action=getannouncement&amp;announce_id=1691586335&amp;version=5&amp;lang=zh_CN"
-                                target="_blank">关于开展微信小程序备案的通知</a></div>
-                            <div data-v-5bb8d6d1="" class="index_news_item_right"><span data-v-5bb8d6d1=""
-                                class="index_news_date">2023-08-09</span><a data-v-5bb8d6d1=""
-                                href="https://mp.weixin.qq.com/wxamp/tools/announcement_list?token=1176097902&amp;lang=zh_CN"
-                                target="_blank" class="index_news_readmore" data-msgid="更多"
-                                data-current-language="zh_CN">更多</a></div>
-                          </div>
-                        </div>
-                      </div>
+          <div class="col_main_inner" id="main-content-container">
+            <!-- 内容将动态插入这里 -->
+          </div>
+          <div data-v-6614b61a="" class="sub-app-container" data-component="subApp">
+            <div data-v-6614b61a="" modulename="mmbizgame" data-component="wujie-sub-app">
+              <div data-component="WujieVue" style="width: 100%; height: 100%;"><wujie-app data-wujie-id="gamePayment"
+                  class="wujie_iframe" data-wujie-attach-css-flag="">
+                  <template shadowrootmode="open">
+                    <html>
+                    <div
+                      style="position: fixed; z-index: 2147483647; visibility: hidden; inset: 0px; backface-visibility: hidden;">
                     </div>
 
-                  </div>
-                </div>
-              </div>
+                    <head>
+                      <title>微信游戏圈运营平台</title>
+                      <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+                      <meta name="keywords" content="">
+                      <meta name="description" content="">
+                      <meta name="apple-mobile-web-app-capable" content="no">
+                      <meta name="format-detection" content="telephone=no">
+                      <meta name="renderer" content="webkit">
+                      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+                      <meta http-equiv="Content-Security-Policy"
+                        content="script-src pingjs.qq.com *.qpic.cn *.qq.com *.oa.com *.gtimg.cn *.gtimg.com localhost:* &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;;worker-src blob: &#39;self&#39;">
+                      <!-- async script //mmgame.qpic.cn/management/helm.js replaced by wujie --><!-- inline scripts replaced by wujie -->
+                      <meta name="libs-version" content="">
+                      <link rel="shortcut icon" href="https://mmgame.qpic.cn/gamemp/minigame/favicon.ico">
+                      <link rel="stylesheet" href="basic_data_files/basic_data_son.css">
+                    </head>
 
-              <div style="margin-bottom: 24px;">
-                <div data-component="WujieVue" style="width: 100%;">
-                  <html>
-                  <div
-                    style="position: fixed; z-index: 2147483647; visibility: hidden; inset: 0px; backface-visibility: hidden;">
-                  </div>
+                    <body>
+                      <div id="content-container" class="mod-frame__container"></div>
+                      <script>
+                        // 在template内部设置全局变量，方便外部访问
+                        window.contentContainerRef = document.getElementById('content-container');
+                      </script>
+                    </body>
 
-                  <body>
-                    <div id="app" class="mod-frame__container">
-                      <div class="mod-weixin-area">
-                        <div class="mod-weixin-area__body mod-weixin-area__body_padding">
-                          <div>
-                            <div class="advertisingIndex"><!----> <!----> <!---->
-                              <div class="main_bd">
-                                <div data-v-159a6efd="" class="ability-map in-home-page">
-                                  <div data-v-6f5fc070="" data-v-159a6efd="" class="wg-mp-ui__box ability-body">
-                                    <div class="mod_default_box" style="min-height: 0px;">
-                                      <div class="mod_default_hd">
-                                        <h4 data-v-6f5fc070="">
-                                          能力地图
-                                          <!---->
-                                        </h4> <a data-v-6f5fc070="" class="view-all">查看全部能力</a>
-                                        <div class="mod_hd_extra"></div>
-                                      </div>
-                                      <div class="mod_default_bd">
-                                        <div data-v-6f5fc070="" class="ability-body-no-once">
-                                          <div data-v-6f5fc070="">
-                                            <p data-v-6f5fc070="" class="title">常用能力</p>
-                                            <div data-v-6f5fc070="" class="ability-body-no-once-main">
-                                              <div data-v-6f5fc070="" class="main-tag"><span data-v-6f5fc070=""
-                                                  class="main-tag-name"><span data-v-6f5fc070="">基础数据</span></span>
-                                                <span data-v-6f5fc070="" class="main-tagl-link"
-                                                  style="display: none;">详情</span>
-                                              </div>
-                                              <div data-v-6f5fc070="" class="main-tag"><span data-v-6f5fc070=""
-                                                  class="main-tag-name"><span data-v-6f5fc070="">RTA投放</span></span>
-                                                <span data-v-6f5fc070="" class="main-tagl-link"
-                                                  style="display: none;">详情</span>
-                                              </div>
-                                              <div data-v-6f5fc070="" class="main-tag"><span data-v-6f5fc070=""
-                                                  class="main-tag-name"><span data-v-6f5fc070="">版本管理</span></span>
-                                                <span data-v-6f5fc070="" class="main-tagl-link"
-                                                  style="display: none;">详情</span>
-                                              </div>
-                                              <div data-v-6f5fc070="" class="main-tag"><span data-v-6f5fc070=""
-                                                  class="main-tag-name"><span data-v-6f5fc070="">虚拟支付</span></span>
-                                                <span data-v-6f5fc070="" class="main-tagl-link"
-                                                  style="display: none;">详情</span>
-                                              </div>
-                                              <div data-v-6f5fc070="" class="main-tag"><span data-v-6f5fc070=""
-                                                  class="main-tag-name"><span data-v-6f5fc070="">CPS合作</span></span>
-                                                <span data-v-6f5fc070="" class="main-tagl-link"
-                                                  style="display: none;">详情</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                          <div data-v-6f5fc070="">
-                                            <p data-v-6f5fc070="" class="title">推荐使用</p>
-                                            <div data-v-6f5fc070="" class="ability-body-no-once-main ability-child">
-                                              <div data-v-6f5fc070="" class="ability-item">
-                                                <div data-v-6f5fc070="">
-                                                  <div data-v-6f5fc070="" class="ability-child-top"><span
-                                                      data-v-6f5fc070="" class="ability-child-top__title"><span
-                                                        data-v-6f5fc070="">擂台赛组件</span> <span data-v-6f5fc070=""
-                                                        class="tips red">NEW</span></span> <span data-v-6f5fc070=""
-                                                      class="detail-link" style="display: none;">详情</span></div>
-                                                  <div data-v-6f5fc070="" class="ability-child-content">
-                                                    敏捷接入后支持用户发起和参与有奖擂台赛，平台将通过服务通知和聊天工具等形式触达用户，辅助游戏完成裂变</div>
-                                                  <div data-v-6f5fc070="" class="ability-child-bottom"><span
-                                                      data-v-6f5fc070="" class="tab">社交</span><span data-v-6f5fc070=""
-                                                      class="tab">游戏功能</span></div>
-                                                </div>
-                                              </div>
-                                              <div data-v-6f5fc070="" class="ability-item">
-                                                <div data-v-6f5fc070="">
-                                                  <div data-v-6f5fc070="" class="ability-child-top"><span
-                                                      data-v-6f5fc070="" class="ability-child-top__title"><span
-                                                        data-v-6f5fc070="">游戏内CPS推荐合作</span> <!----></span> <span
-                                                      data-v-6f5fc070="" class="detail-link"
-                                                      style="display: none;">详情</span></div>
-                                                  <div data-v-6f5fc070="" class="ability-child-content">
-                                                    支持在游戏内自定义游戏推荐，用户点击游戏后将被染色，后续该用户在产生的流水，将按照CPS的比例分成结算给游戏</div>
-                                                  <div data-v-6f5fc070="" class="ability-child-bottom"><span
-                                                      data-v-6f5fc070="" class="tab">流量流转</span><span data-v-6f5fc070=""
-                                                      class="tab">商业变现</span></div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </body>
-
-                  </html>
-                </div>
-              </div>
-              <div class="mod_default_box update__box">
-                <div data-v-1fb0151b="" data-component="onTimePanel_wedata">
-                  <div data-v-1fb0151b="" class="mod_default_hd data-overview__header">
-                    <div data-v-1fb0151b="" class="data-overview__title">
-                      <h4 data-v-1fb0151b="" data-msgid="实时访问数据" data-current-language="zh_CN">实时访问数据</h4><br
-                        data-v-1fb0151b="">
-                      <div data-v-1fb0151b="" class="desc data-overview__time">2025年12月28日 00:00</div>
-                    </div>
-                    <div data-v-1fb0151b="" class="data-overview__extra">
-                      <div data-v-1fb0151b="" class="weui-desktop-btn_wrp" data-component="mp-button"><button
-                          type="button" class="weui-desktop-btn weui-desktop-btn_default"><span data-v-1fb0151b=""
-                            data-component="translate">实时数据分析</span></button></div>
-                    </div>
-                  </div>
-                  <div data-v-1fb0151b="" class="app_data_box_bd">
-                    <div data-v-1fb0151b="" class="app_graph_content">
-                      <div data-v-1fb0151b="" id="onTimeTrend_wedata">
-                        <div style="position:relative;"><canvas id="canvas_1" width="2146" height="940"
-                            style="width: 1073px; height: 470px;"></canvas>
-                          <div class="g2-tooltip"
-                            style="position: absolute; visibility: hidden; z-index: 8; transition: visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1), left 0.4s cubic-bezier(0.23, 1, 0.32, 1), top 0.4s cubic-bezier(0.23, 1, 0.32, 1); background-color: rgba(255, 255, 255, 0.9); box-shadow: rgb(174, 174, 174) 0px 0px 10px; border-radius: 3px; color: rgb(87, 87, 87); font-size: 12px; font-family: BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, SimSun, &quot;sans-serif&quot;; line-height: 20px; padding: 10px 10px 6px;">
-                            <div class="g2-tooltip-title"></div>
-                            <ul class="g2-tooltip-list"></ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div data-component="anonymous">
-                <div class="minigame-helper__iconbox"><img src="./mp_index_files/minigame-helper_ae067c.png" alt=""
-                    draggable="false" ondragstart="return false;" class="minigame-helper__icon"><span
-                    class="minigame-helper__iconreddot" style="">1</span><span
-                    class="minigame-helper__icontext">收到新消息</span></div>
-                <div class="minigame-helper" style="position: fixed; bottom: 120px; right: 70px;">
-                  <div id="resizable" class="minigame-helper__chatbox"
-                    style="position: relative; top: 0px; display: none;">
-                    <div class="minigame-helper__topbox"><span class="minigame-helper__text">开发者助手</span><span
-                        class="minigame-helper__topboxline"></span><img
-                        src="./mp_index_files/minigame-helper-banner-background_0bef54.png" alt=""
-                        class="minigame-helper__topboxbackground"><img
-                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAABXWlDQ1BJQ0MgUHJvZmlsZQAAKJF1kb1PwlAUxQ8fifFrUBw7MDKgIYrRxQEwEo0xDWIiOpXSAgnFZ1uCzP4dJg4mjMZNdGBxcHAw0bjq6kaMccXzigTQeJPb+3vnnXfvSx/gVzQhKsEYYFVdO5NOhvdzB+Gxd/gxixAUBDTdEQlV3QajX0fj6wU+WZ/mZa/m81n05iRQujzu6Dt35/G//pEYLxiOztphFnRhu4AvS1brrpB8QZ6zeSnyteRijx8k53v85nmymRT5kxzJD3FxiK1KTf+ZK288ZVT3dlk3mArWUYYDgQo0NBCGiiV+01xZqMEl1+lwUSI5yHAnScrCpqNKxYRBxj8z4t6MFI44oUFfGUV2kl0TVORUg7zJTjoWECUvIsZclu/x+z8PtNNXYK3d7XZvB9pWG7haASZaAy2yCsxMAvctodmaJwWZftMEPprAdA4IPfLMYf9hvgEe8WGvpz1LOQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAJqADAAQAAAABAAAAJgAAAACnOgJhAAAA50lEQVRYCe2X0Q2CQBBEQfm3AiuwAq3AAoyNWIh9UIINWIixD2eIlywfJrvLneFjLtlwJDN3w+OAo+tW2raNcu0x7hm1Q70azZEa9grXG3VPuWHaZI2tfQoWJSxiIhYlENVrjYlYlEBUrzUWJTZEDUH9Afpb0DPJ+4zJ4WGgh0P3U9IqGCdkOG4W1f5CoNxK7tGPC2Z8wlt1b1+eSoZK78+/F3TBkQGrtBKMVzsmR+QiZ51Q1YIls8xsfE/xjyj1vpqNZE70STIwXF0Rc2EyIhEzMFxdEXNhMiIRMzBcXRFzYTKi1RL7AJniDfAJLOTHAAAAAElFTkSuQmCC"
-                        alt="" class="minigame-helper__topboxicon"></div><!---->
-                    <div data-direction="top" class="resizer resizer-top"></div>
-                    <div data-direction="bottom" class="resizer resizer-bottom"></div>
-                    <div data-direction="left" class="resizer resizer-left"></div>
-                    <div data-direction="right" class="resizer resizer-right"></div>
-                  </div>
-                </div>
-                <div id="drag-mask"
-                  style="position: fixed; top: 0px; left: 0px; width: 100vw; height: 100vh; z-index: 995; opacity: 0; display: none;">
-                </div>
-              </div>
-            </div>
-            <div data-v-6614b61a="" class="sub-app-container" data-component="subApp">
-              <div data-v-6614b61a="" modulename="mmbizgame" data-component="wujie-sub-app">
-                <div data-component="WujieVue" style="width: 100%; height: 100%;"><wujie-app data-wujie-id="gamePayment"
-                    class="wujie_iframe" data-wujie-attach-css-flag=""><template shadowrootmode="open">
-                      <html>
-                      <div
-                        style="position: fixed; z-index: 2147483647; visibility: hidden; inset: 0px; backface-visibility: hidden;">
-                      </div>
-
-                      <head>
-                        <title>微信游戏圈运营平台</title>
-                        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-                        <meta name="keywords" content="">
-                        <meta name="description" content="">
-                        <meta name="apple-mobile-web-app-capable" content="no">
-                        <meta name="format-detection" content="telephone=no">
-                        <meta name="renderer" content="webkit">
-                        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-                        <meta http-equiv="Content-Security-Policy"
-                          content="script-src pingjs.qq.com *.qpic.cn *.qq.com *.oa.com *.gtimg.cn *.gtimg.com localhost:* &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;;worker-src blob: &#39;self&#39;">
-                        <!-- async script //mmgame.qpic.cn/management/helm.js replaced by wujie --><!-- inline scripts replaced by wujie -->
-                        <meta name="libs-version" content="">
-                        <link rel="shortcut icon" href="https://mmgame.qpic.cn/gamemp/minigame/favicon.ico">
-                        <link rel="stylesheet" href="basic_data_files/basic_data_son.css">
-                      </head>
-
-                      <body>
-                        <div id="content-container" class="mod-frame__container">
-
-                        </div>
-                        <script>
-                          // 在template内部设置全局变量，方便外部访问
-                          window.contentContainerRef = document.getElementById('content-container');
-                        </script>
-
-
-                        <div id="calendar_1766823076647" class="ta_calendar ta_calendar2 cf"
-                          style="z-index: 9999; display: none;">
-                          <div class="ta_calendar_cont cf" id="dateRangePicker_1766823076647">
-                            <table class="dateRangeDateTable">
-                              <caption>2025年11月</caption>
-                              <thead>
-                                <tr>
-                                  <th>日</th>
-                                  <th>一</th>
-                                  <th>二</th>
-                                  <th>三</th>
-                                  <th>四</th>
-                                  <th>五</th>
-                                  <th>六</th>
-                                </tr>
-                              </thead>
-                              <tr>
-                                <td colspan="7" style="text-align: center;"><a href="javascript:void(0);"
-                                    id="dateRangePreMonth_1766823076647"><i class="i_pre"></i></a></td>
-                              </tr>
-                              <tr>
-                                <td class="ta_dateRangeGray">26</td>
-                                <td class="ta_dateRangeGray">27</td>
-                                <td class="ta_dateRangeGray">28</td>
-                                <td class="ta_dateRangeGray">29</td>
-                                <td class="ta_dateRangeGray">30</td>
-                                <td class="ta_dateRangeGray">31</td>
-                                <td id="calendar_1766823076647_2025-11-1" style="cursor: pointer;">1</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823076647_2025-11-2" style="cursor: pointer;">2</td>
-                                <td id="calendar_1766823076647_2025-11-3" style="cursor: pointer;">3</td>
-                                <td id="calendar_1766823076647_2025-11-4" style="cursor: pointer;">4</td>
-                                <td id="calendar_1766823076647_2025-11-5" style="cursor: pointer;">5</td>
-                                <td id="calendar_1766823076647_2025-11-6" style="cursor: pointer;">6</td>
-                                <td id="calendar_1766823076647_2025-11-7" style="cursor: pointer;">7</td>
-                                <td id="calendar_1766823076647_2025-11-8" style="cursor: pointer;">8</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823076647_2025-11-9" style="cursor: pointer;">9</td>
-                                <td id="calendar_1766823076647_2025-11-10" style="cursor: pointer;">10</td>
-                                <td id="calendar_1766823076647_2025-11-11" style="cursor: pointer;">11</td>
-                                <td id="calendar_1766823076647_2025-11-12" style="cursor: pointer;">12</td>
-                                <td id="calendar_1766823076647_2025-11-13" style="cursor: pointer;">13</td>
-                                <td id="calendar_1766823076647_2025-11-14" style="cursor: pointer;">14</td>
-                                <td id="calendar_1766823076647_2025-11-15" style="cursor: pointer;">15</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823076647_2025-11-16" style="cursor: pointer;">16</td>
-                                <td id="calendar_1766823076647_2025-11-17" style="cursor: pointer;">17</td>
-                                <td id="calendar_1766823076647_2025-11-18" style="cursor: pointer;">18</td>
-                                <td id="calendar_1766823076647_2025-11-19" style="cursor: pointer;">19</td>
-                                <td id="calendar_1766823076647_2025-11-20" style="cursor: pointer;">20</td>
-                                <td id="calendar_1766823076647_2025-11-21" style="cursor: pointer;">21</td>
-                                <td id="calendar_1766823076647_2025-11-22" style="cursor: pointer;">22</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823076647_2025-11-23" style="cursor: pointer;">23</td>
-                                <td id="calendar_1766823076647_2025-11-24" style="cursor: pointer;">24</td>
-                                <td id="calendar_1766823076647_2025-11-25" style="cursor: pointer;">25</td>
-                                <td id="calendar_1766823076647_2025-11-26" style="cursor: pointer;">26</td>
-                                <td id="calendar_1766823076647_2025-11-27" style="cursor: pointer;">27</td>
-                                <td id="calendar_1766823076647_2025-11-28" style="cursor: pointer;">28</td>
-                                <td id="calendar_1766823076647_2025-11-29" style="cursor: pointer;">29</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823076647_2025-11-30" style="cursor: pointer;">30</td>
-                                <td class="ta_dateRangeGray">1</td>
-                                <td class="ta_dateRangeGray">2</td>
-                                <td class="ta_dateRangeGray">3</td>
-                                <td class="ta_dateRangeGray">4</td>
-                                <td class="ta_dateRangeGray">5</td>
-                                <td class="ta_dateRangeGray">6</td>
-                              </tr>
-                            </table>
-                            <table class="dateRangeDateTable">
-                              <caption>2025年12月</caption>
-                              <thead>
-                                <tr>
-                                  <th>日</th>
-                                  <th>一</th>
-                                  <th>二</th>
-                                  <th>三</th>
-                                  <th>四</th>
-                                  <th>五</th>
-                                  <th>六</th>
-                                </tr>
-                              </thead>
-                              <tr>
-                                <td colspan="7" style="text-align: center;"><a href="javascript:void(0);"
-                                    id="dateRangeNextMonth_1766823076647"><i class="i_next"></i></a></td>
-                              </tr>
-                              <tr>
-                                <td class="ta_dateRangeGray">30</td>
-                                <td id="calendar_1766823076647_2025-12-1" style="cursor: pointer;">1</td>
-                                <td id="calendar_1766823076647_2025-12-2" style="cursor: pointer;">2</td>
-                                <td id="calendar_1766823076647_2025-12-3" style="cursor: pointer;">3</td>
-                                <td id="calendar_1766823076647_2025-12-4" style="cursor: pointer;">4</td>
-                                <td id="calendar_1766823076647_2025-12-5" style="cursor: pointer;">5</td>
-                                <td id="calendar_1766823076647_2025-12-6" style="cursor: pointer;">6</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823076647_2025-12-7" style="cursor: pointer;">7</td>
-                                <td id="calendar_1766823076647_2025-12-8" style="cursor: pointer;">8</td>
-                                <td id="calendar_1766823076647_2025-12-9" style="cursor: pointer;">9</td>
-                                <td id="calendar_1766823076647_2025-12-10" style="cursor: pointer;">10</td>
-                                <td id="calendar_1766823076647_2025-12-11" style="cursor: pointer;">11</td>
-                                <td id="calendar_1766823076647_2025-12-12" style="cursor: pointer;">12</td>
-                                <td id="calendar_1766823076647_2025-12-13" style="cursor: pointer;">13</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823076647_2025-12-14" style="cursor: pointer;">14</td>
-                                <td id="calendar_1766823076647_2025-12-15" style="cursor: pointer;">15</td>
-                                <td id="calendar_1766823076647_2025-12-16" style="cursor: pointer;">16</td>
-                                <td id="calendar_1766823076647_2025-12-17" style="cursor: pointer;">17</td>
-                                <td id="calendar_1766823076647_2025-12-18" style="cursor: pointer;">18</td>
-                                <td id="calendar_1766823076647_2025-12-19" style="cursor: pointer;">19</td>
-                                <td id="calendar_1766823076647_2025-12-20" class="first" style="cursor: pointer;">20
-                                </td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823076647_2025-12-21" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">21</td>
-                                <td id="calendar_1766823076647_2025-12-22" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">22</td>
-                                <td id="calendar_1766823076647_2025-12-23" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">23</td>
-                                <td id="calendar_1766823076647_2025-12-24" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">24</td>
-                                <td id="calendar_1766823076647_2025-12-25" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">25</td>
-                                <td id="calendar_1766823076647_2025-12-26" class="last" style="cursor: pointer;">26</td>
-                                <td class="ta_dateRangeGray">27</td>
-                              </tr>
-                              <tr>
-                                <td class="ta_dateRangeGray">28</td>
-                                <td class="ta_dateRangeGray">29</td>
-                                <td class="ta_dateRangeGray">30</td>
-                                <td class="ta_dateRangeGray">31</td>
-                                <td class="ta_dateRangeGray">1</td>
-                                <td class="ta_dateRangeGray">2</td>
-                                <td class="ta_dateRangeGray">3</td>
-                              </tr>
-                            </table>
-                          </div>
-                          <div class="ta_calendar_footer cf">
-                            <div class="frm_msg">
-                              <div id="dateRangeDiv_1766823076647"><input type="text"
-                                  class="ta_ipt_text_s ta_dateRangeSelected" name="startDate_1766823076647"
-                                  id="startDate_1766823076647" value="2025-12-20" readonly=""
-                                  style="background-repeat: repeat;"><span class="joinLine"> - </span><input type="text"
-                                  class="ta_ipt_text_s" name="endDate_1766823076647" id="endDate_1766823076647"
-                                  value="2025-12-26" readonly=""><br></div>
-                              <div id="dateRangeCompareDiv_1766823076647" style="display: none;"><input type="text"
-                                  class="ta_ipt_text_s" name="startCompareDate_1766823076647"
-                                  id="startCompareDate_1766823076647" value="" readonly=""><span class="joinLine"> -
-                                </span><input type="text" class="ta_ipt_text_s" name="endCompareDate_1766823076647"
-                                  id="endCompareDate_1766823076647" value="" readonly=""></div>
-                            </div>
-                            <div class="frm_btn"><input class="ta_btn ta_btn_primary" type="button"
-                                name="submit_1766823076647" id="submit_1766823076647" value="确定"><input class="ta_btn"
-                                type="button" id="closeBtn_1766823076647" value="取消"></div>
-                          </div>
-                        </div><input type="hidden" id="startDate" name="startDate" value="2025-12-20"><input
-                          type="hidden" id="endDate" name="endDate" value="2025-12-26"><input type="checkbox"
-                          id="needCompare" name="needCompare" value="0" style="display:none;"><input type="hidden"
-                          id="startCompareDate" name="startCompareDate" value=""><input type="hidden"
-                          id="endCompareDate" name="endCompareDate" value="">
-                        <div id="calendar_1766823341884" class="ta_calendar ta_calendar2 cf"
-                          style="z-index: 9999; display: none;">
-                          <div class="ta_calendar_cont cf" id="dateRangePicker_1766823341884">
-                            <table class="dateRangeDateTable">
-                              <caption>2025年11月</caption>
-                              <thead>
-                                <tr>
-                                  <th>日</th>
-                                  <th>一</th>
-                                  <th>二</th>
-                                  <th>三</th>
-                                  <th>四</th>
-                                  <th>五</th>
-                                  <th>六</th>
-                                </tr>
-                              </thead>
-                              <tr>
-                                <td colspan="7" style="text-align: center;"><a href="javascript:void(0);"
-                                    id="dateRangePreMonth_1766823341884"><i class="i_pre"></i></a></td>
-                              </tr>
-                              <tr>
-                                <td class="ta_dateRangeGray">26</td>
-                                <td class="ta_dateRangeGray">27</td>
-                                <td class="ta_dateRangeGray">28</td>
-                                <td class="ta_dateRangeGray">29</td>
-                                <td class="ta_dateRangeGray">30</td>
-                                <td class="ta_dateRangeGray">31</td>
-                                <td id="calendar_1766823341884_2025-11-1" style="cursor: pointer;">1</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823341884_2025-11-2" style="cursor: pointer;">2</td>
-                                <td id="calendar_1766823341884_2025-11-3" style="cursor: pointer;">3</td>
-                                <td id="calendar_1766823341884_2025-11-4" style="cursor: pointer;">4</td>
-                                <td id="calendar_1766823341884_2025-11-5" style="cursor: pointer;">5</td>
-                                <td id="calendar_1766823341884_2025-11-6" style="cursor: pointer;">6</td>
-                                <td id="calendar_1766823341884_2025-11-7" style="cursor: pointer;">7</td>
-                                <td id="calendar_1766823341884_2025-11-8" style="cursor: pointer;">8</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823341884_2025-11-9" style="cursor: pointer;">9</td>
-                                <td id="calendar_1766823341884_2025-11-10" style="cursor: pointer;">10</td>
-                                <td id="calendar_1766823341884_2025-11-11" style="cursor: pointer;">11</td>
-                                <td id="calendar_1766823341884_2025-11-12" style="cursor: pointer;">12</td>
-                                <td id="calendar_1766823341884_2025-11-13" style="cursor: pointer;">13</td>
-                                <td id="calendar_1766823341884_2025-11-14" style="cursor: pointer;">14</td>
-                                <td id="calendar_1766823341884_2025-11-15" style="cursor: pointer;">15</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823341884_2025-11-16" style="cursor: pointer;">16</td>
-                                <td id="calendar_1766823341884_2025-11-17" style="cursor: pointer;">17</td>
-                                <td id="calendar_1766823341884_2025-11-18" style="cursor: pointer;">18</td>
-                                <td id="calendar_1766823341884_2025-11-19" style="cursor: pointer;">19</td>
-                                <td id="calendar_1766823341884_2025-11-20" style="cursor: pointer;">20</td>
-                                <td id="calendar_1766823341884_2025-11-21" style="cursor: pointer;">21</td>
-                                <td id="calendar_1766823341884_2025-11-22" style="cursor: pointer;">22</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823341884_2025-11-23" style="cursor: pointer;">23</td>
-                                <td id="calendar_1766823341884_2025-11-24" style="cursor: pointer;">24</td>
-                                <td id="calendar_1766823341884_2025-11-25" style="cursor: pointer;">25</td>
-                                <td id="calendar_1766823341884_2025-11-26" style="cursor: pointer;">26</td>
-                                <td id="calendar_1766823341884_2025-11-27" style="cursor: pointer;">27</td>
-                                <td id="calendar_1766823341884_2025-11-28" style="cursor: pointer;">28</td>
-                                <td id="calendar_1766823341884_2025-11-29" style="cursor: pointer;">29</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823341884_2025-11-30" style="cursor: pointer;">30</td>
-                                <td class="ta_dateRangeGray">1</td>
-                                <td class="ta_dateRangeGray">2</td>
-                                <td class="ta_dateRangeGray">3</td>
-                                <td class="ta_dateRangeGray">4</td>
-                                <td class="ta_dateRangeGray">5</td>
-                                <td class="ta_dateRangeGray">6</td>
-                              </tr>
-                              <tr>
-                                <td colspan="7" style="background-color: rgb(244, 245, 249);">
-                                  <div>
-                                    <label style="color:#8d8d8d">时间</label>
-                                    <div class="dropdown_wrp dropdown_menu js_dr_timeSelectBox" style="width:62px;">
-                                      <a href="javascript:;" class="btn dropdown_switch js_dr_selecter"><label
-                                          class="js_dr_timeLabel">16</label><i class="arrow"></i></a>
-                                      <div class="dropdown_data_container js_dr_option">
-                                        <ul class="dropdown_data_list">
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="00">00</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="01">01</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="02">02</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="03">03</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="04">04</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="05">05</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="06">06</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="07">07</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="08">08</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="09">09</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="10">10</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="11">11</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="12">12</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="13">13</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="14">14</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="15">15</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="16">16</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="17">17</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="18">18</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="19">19</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="20">20</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="21">21</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="22">22</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="23">23</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div> :
-                                    <span class="frm_input_box" style="width:30px;">
-                                      <input type="text" class="frm_input js_dr_msLabel js_dr_minLabel" value="15"
-                                        style="text-align: center;">
-                                    </span> :
-                                    <span class="frm_input_box" style="width:30px;">
-                                      <input type="text" class="frm_input js_dr_msLabel js_dr_secLabel" value="00"
-                                        style="text-align: center;">
-                                    </span>
-                                  </div>
-                                </td>
-                              </tr>
-                            </table>
-                            <table class="dateRangeDateTable">
-                              <caption>2025年12月</caption>
-                              <thead>
-                                <tr>
-                                  <th>日</th>
-                                  <th>一</th>
-                                  <th>二</th>
-                                  <th>三</th>
-                                  <th>四</th>
-                                  <th>五</th>
-                                  <th>六</th>
-                                </tr>
-                              </thead>
-                              <tr>
-                                <td colspan="7" style="text-align: center;"><a href="javascript:void(0);"
-                                    id="dateRangeNextMonth_1766823341884"><i class="i_next"></i></a></td>
-                              </tr>
-                              <tr>
-                                <td class="ta_dateRangeGray">30</td>
-                                <td id="calendar_1766823341884_2025-12-1" style="cursor: pointer;">1</td>
-                                <td id="calendar_1766823341884_2025-12-2" style="cursor: pointer;">2</td>
-                                <td id="calendar_1766823341884_2025-12-3" style="cursor: pointer;">3</td>
-                                <td id="calendar_1766823341884_2025-12-4" style="cursor: pointer;">4</td>
-                                <td id="calendar_1766823341884_2025-12-5" style="cursor: pointer;">5</td>
-                                <td id="calendar_1766823341884_2025-12-6" style="cursor: pointer;">6</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823341884_2025-12-7" style="cursor: pointer;">7</td>
-                                <td id="calendar_1766823341884_2025-12-8" style="cursor: pointer;">8</td>
-                                <td id="calendar_1766823341884_2025-12-9" style="cursor: pointer;">9</td>
-                                <td id="calendar_1766823341884_2025-12-10" style="cursor: pointer;">10</td>
-                                <td id="calendar_1766823341884_2025-12-11" style="cursor: pointer;">11</td>
-                                <td id="calendar_1766823341884_2025-12-12" style="cursor: pointer;">12</td>
-                                <td id="calendar_1766823341884_2025-12-13" style="cursor: pointer;">13</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823341884_2025-12-14" style="cursor: pointer;">14</td>
-                                <td id="calendar_1766823341884_2025-12-15" style="cursor: pointer;">15</td>
-                                <td id="calendar_1766823341884_2025-12-16" style="cursor: pointer;">16</td>
-                                <td id="calendar_1766823341884_2025-12-17" style="cursor: pointer;">17</td>
-                                <td id="calendar_1766823341884_2025-12-18" style="cursor: pointer;">18</td>
-                                <td id="calendar_1766823341884_2025-12-19" style="cursor: pointer;">19</td>
-                                <td id="calendar_1766823341884_2025-12-20" class="first" style="cursor: pointer;">20
-                                </td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823341884_2025-12-21" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">21</td>
-                                <td id="calendar_1766823341884_2025-12-22" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">22</td>
-                                <td id="calendar_1766823341884_2025-12-23" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">23</td>
-                                <td id="calendar_1766823341884_2025-12-24" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">24</td>
-                                <td id="calendar_1766823341884_2025-12-25" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">25</td>
-                                <td id="calendar_1766823341884_2025-12-26" class="last" style="cursor: pointer;">26</td>
-                                <td class="ta_dateRangeGray">27</td>
-                              </tr>
-                              <tr>
-                                <td class="ta_dateRangeGray">28</td>
-                                <td class="ta_dateRangeGray">29</td>
-                                <td class="ta_dateRangeGray">30</td>
-                                <td class="ta_dateRangeGray">31</td>
-                                <td class="ta_dateRangeGray">1</td>
-                                <td class="ta_dateRangeGray">2</td>
-                                <td class="ta_dateRangeGray">3</td>
-                              </tr>
-                              <tr>
-                                <td colspan="7" style="background-color: rgb(244, 245, 249);">
-                                  <div>
-                                    <label style="color:#8d8d8d">时间</label>
-                                    <div class="dropdown_wrp dropdown_menu js_dr_timeSelectBox" style="width:62px;">
-                                      <a href="javascript:;" class="btn dropdown_switch js_dr_selecter"><label
-                                          class="js_dr_timeLabel">16</label><i class="arrow"></i></a>
-                                      <div class="dropdown_data_container js_dr_option">
-                                        <ul class="dropdown_data_list">
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="00">00</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="01">01</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="02">02</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="03">03</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="04">04</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="05">05</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="06">06</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="07">07</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="08">08</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="09">09</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="10">10</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="11">11</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="12">12</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="13">13</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="14">14</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="15">15</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="16">16</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="17">17</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="18">18</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="19">19</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="20">20</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="21">21</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="22">22</a>
-                                          </li>
-                                          <li class="dropdown_data_item">
-                                            <a href="javascript:;" class="js_dr_time" data-value="23">23</a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div> :
-                                    <span class="frm_input_box" style="width:30px;">
-                                      <input type="text" class="frm_input js_dr_msLabel js_dr_minLabel" value="15"
-                                        style="text-align: center;">
-                                    </span> :
-                                    <span class="frm_input_box" style="width:30px;">
-                                      <input type="text" class="frm_input js_dr_msLabel js_dr_secLabel" value="00"
-                                        style="text-align: center;">
-                                    </span>
-                                  </div>
-                                </td>
-                              </tr>
-                            </table>
-                          </div>
-                          <div class="ta_calendar_footer cf">
-                            <div class="frm_msg">
-                              <div id="dateRangeDiv_1766823341884"><input type="text"
-                                  class="ta_ipt_text_s ta_dateRangeSelected" name="startDate_1766823341884"
-                                  id="startDate_1766823341884" value="2025-12-20" readonly=""
-                                  style="background-repeat: repeat;"><span class="joinLine"> - </span><input type="text"
-                                  class="ta_ipt_text_s" name="endDate_1766823341884" id="endDate_1766823341884"
-                                  value="2025-12-26" readonly=""><br></div>
-                              <div id="dateRangeCompareDiv_1766823341884" style="display: none;"><input type="text"
-                                  class="ta_ipt_text_s" name="startCompareDate_1766823341884"
-                                  id="startCompareDate_1766823341884" value="" readonly="" disabled="disabled"><span
-                                  class="joinLine"> - </span><input type="text" class="ta_ipt_text_s"
-                                  name="endCompareDate_1766823341884" id="endCompareDate_1766823341884" value=""
-                                  readonly="" disabled="disabled"></div>
-                            </div>
-                            <div class="frm_btn"><input class="ta_btn ta_btn_primary" type="button"
-                                name="submit_1766823341884" id="submit_1766823341884" value="确定"><input class="ta_btn"
-                                type="button" id="closeBtn_1766823341884" value="取消"></div>
-                          </div>
-                        </div>
-                        <div id="calendar_1766823342650" class="ta_calendar ta_calendar2 cf"
-                          style="z-index: 9999; display: none;">
-                          <div class="ta_calendar_cont cf" id="dateRangePicker_1766823342650">
-                            <table class="dateRangeDateTable">
-                              <caption>2025年11月</caption>
-                              <thead>
-                                <tr>
-                                  <th>日</th>
-                                  <th>一</th>
-                                  <th>二</th>
-                                  <th>三</th>
-                                  <th>四</th>
-                                  <th>五</th>
-                                  <th>六</th>
-                                </tr>
-                              </thead>
-                              <tr>
-                                <td colspan="7" style="text-align: center;"><a href="javascript:void(0);"
-                                    id="dateRangePreMonth_1766823342650"><i class="i_pre"></i></a></td>
-                              </tr>
-                              <tr>
-                                <td class="ta_dateRangeGray">26</td>
-                                <td class="ta_dateRangeGray">27</td>
-                                <td class="ta_dateRangeGray">28</td>
-                                <td class="ta_dateRangeGray">29</td>
-                                <td class="ta_dateRangeGray">30</td>
-                                <td class="ta_dateRangeGray">31</td>
-                                <td id="calendar_1766823342650_2025-11-1" style="cursor: pointer;">1</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823342650_2025-11-2" style="cursor: pointer;">2</td>
-                                <td id="calendar_1766823342650_2025-11-3" style="cursor: pointer;">3</td>
-                                <td id="calendar_1766823342650_2025-11-4" style="cursor: pointer;">4</td>
-                                <td id="calendar_1766823342650_2025-11-5" style="cursor: pointer;">5</td>
-                                <td id="calendar_1766823342650_2025-11-6" style="cursor: pointer;">6</td>
-                                <td id="calendar_1766823342650_2025-11-7" style="cursor: pointer;">7</td>
-                                <td id="calendar_1766823342650_2025-11-8" style="cursor: pointer;">8</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823342650_2025-11-9" style="cursor: pointer;">9</td>
-                                <td id="calendar_1766823342650_2025-11-10" style="cursor: pointer;">10</td>
-                                <td id="calendar_1766823342650_2025-11-11" style="cursor: pointer;">11</td>
-                                <td id="calendar_1766823342650_2025-11-12" style="cursor: pointer;">12</td>
-                                <td id="calendar_1766823342650_2025-11-13" style="cursor: pointer;">13</td>
-                                <td id="calendar_1766823342650_2025-11-14" style="cursor: pointer;">14</td>
-                                <td id="calendar_1766823342650_2025-11-15" style="cursor: pointer;">15</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823342650_2025-11-16" style="cursor: pointer;">16</td>
-                                <td id="calendar_1766823342650_2025-11-17" style="cursor: pointer;">17</td>
-                                <td id="calendar_1766823342650_2025-11-18" style="cursor: pointer;">18</td>
-                                <td id="calendar_1766823342650_2025-11-19" style="cursor: pointer;">19</td>
-                                <td id="calendar_1766823342650_2025-11-20" style="cursor: pointer;">20</td>
-                                <td id="calendar_1766823342650_2025-11-21" style="cursor: pointer;">21</td>
-                                <td id="calendar_1766823342650_2025-11-22" style="cursor: pointer;">22</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823342650_2025-11-23" style="cursor: pointer;">23</td>
-                                <td id="calendar_1766823342650_2025-11-24" style="cursor: pointer;">24</td>
-                                <td id="calendar_1766823342650_2025-11-25" style="cursor: pointer;">25</td>
-                                <td id="calendar_1766823342650_2025-11-26" style="cursor: pointer;">26</td>
-                                <td id="calendar_1766823342650_2025-11-27" style="cursor: pointer;">27</td>
-                                <td id="calendar_1766823342650_2025-11-28" style="cursor: pointer;">28</td>
-                                <td id="calendar_1766823342650_2025-11-29" style="cursor: pointer;">29</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823342650_2025-11-30" style="cursor: pointer;">30</td>
-                                <td class="ta_dateRangeGray">1</td>
-                                <td class="ta_dateRangeGray">2</td>
-                                <td class="ta_dateRangeGray">3</td>
-                                <td class="ta_dateRangeGray">4</td>
-                                <td class="ta_dateRangeGray">5</td>
-                                <td class="ta_dateRangeGray">6</td>
-                              </tr>
-                            </table>
-                            <table class="dateRangeDateTable">
-                              <caption>2025年12月</caption>
-                              <thead>
-                                <tr>
-                                  <th>日</th>
-                                  <th>一</th>
-                                  <th>二</th>
-                                  <th>三</th>
-                                  <th>四</th>
-                                  <th>五</th>
-                                  <th>六</th>
-                                </tr>
-                              </thead>
-                              <tr>
-                                <td colspan="7" style="text-align: center;"><a href="javascript:void(0);"
-                                    id="dateRangeNextMonth_1766823342650"><i class="i_next"></i></a></td>
-                              </tr>
-                              <tr>
-                                <td class="ta_dateRangeGray">30</td>
-                                <td id="calendar_1766823342650_2025-12-1" style="cursor: pointer;">1</td>
-                                <td id="calendar_1766823342650_2025-12-2" style="cursor: pointer;">2</td>
-                                <td id="calendar_1766823342650_2025-12-3" style="cursor: pointer;">3</td>
-                                <td id="calendar_1766823342650_2025-12-4" style="cursor: pointer;">4</td>
-                                <td id="calendar_1766823342650_2025-12-5" style="cursor: pointer;">5</td>
-                                <td id="calendar_1766823342650_2025-12-6" style="cursor: pointer;">6</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823342650_2025-12-7" style="cursor: pointer;">7</td>
-                                <td id="calendar_1766823342650_2025-12-8" style="cursor: pointer;">8</td>
-                                <td id="calendar_1766823342650_2025-12-9" style="cursor: pointer;">9</td>
-                                <td id="calendar_1766823342650_2025-12-10" style="cursor: pointer;">10</td>
-                                <td id="calendar_1766823342650_2025-12-11" style="cursor: pointer;">11</td>
-                                <td id="calendar_1766823342650_2025-12-12" style="cursor: pointer;">12</td>
-                                <td id="calendar_1766823342650_2025-12-13" style="cursor: pointer;">13</td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823342650_2025-12-14" style="cursor: pointer;">14</td>
-                                <td id="calendar_1766823342650_2025-12-15" style="cursor: pointer;">15</td>
-                                <td id="calendar_1766823342650_2025-12-16" style="cursor: pointer;">16</td>
-                                <td id="calendar_1766823342650_2025-12-17" style="cursor: pointer;">17</td>
-                                <td id="calendar_1766823342650_2025-12-18" style="cursor: pointer;">18</td>
-                                <td id="calendar_1766823342650_2025-12-19" style="cursor: pointer;">19</td>
-                                <td id="calendar_1766823342650_2025-12-20" class="first" style="cursor: pointer;">20
-                                </td>
-                              </tr>
-                              <tr>
-                                <td id="calendar_1766823342650_2025-12-21" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">21</td>
-                                <td id="calendar_1766823342650_2025-12-22" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">22</td>
-                                <td id="calendar_1766823342650_2025-12-23" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">23</td>
-                                <td id="calendar_1766823342650_2025-12-24" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">24</td>
-                                <td id="calendar_1766823342650_2025-12-25" class="ta_dateRangeSelected"
-                                  style="cursor: pointer;">25</td>
-                                <td id="calendar_1766823342650_2025-12-26" class="last" style="cursor: pointer;">26</td>
-                                <td class="ta_dateRangeGray">27</td>
-                              </tr>
-                              <tr>
-                                <td class="ta_dateRangeGray">28</td>
-                                <td class="ta_dateRangeGray">29</td>
-                                <td class="ta_dateRangeGray">30</td>
-                                <td class="ta_dateRangeGray">31</td>
-                                <td class="ta_dateRangeGray">1</td>
-                                <td class="ta_dateRangeGray">2</td>
-                                <td class="ta_dateRangeGray">3</td>
-                              </tr>
-                            </table>
-                          </div>
-                          <div class="ta_calendar_footer cf">
-                            <div class="frm_msg">
-                              <div id="dateRangeDiv_1766823342650"><input type="text"
-                                  class="ta_ipt_text_s ta_dateRangeSelected" name="startDate_1766823342650"
-                                  id="startDate_1766823342650" value="2025-12-20" readonly=""
-                                  style="background-repeat: repeat;"><span class="joinLine"> - </span><input type="text"
-                                  class="ta_ipt_text_s" name="endDate_1766823342650" id="endDate_1766823342650"
-                                  value="2025-12-26" readonly=""><br></div>
-                              <div id="dateRangeCompareDiv_1766823342650" style="display: none;"><input type="text"
-                                  class="ta_ipt_text_s" name="startCompareDate_1766823342650"
-                                  id="startCompareDate_1766823342650" value="" readonly=""><span class="joinLine"> -
-                                </span><input type="text" class="ta_ipt_text_s" name="endCompareDate_1766823342650"
-                                  id="endCompareDate_1766823342650" value="" readonly=""></div>
-                            </div>
-                            <div class="frm_btn"><input class="ta_btn ta_btn_primary" type="button"
-                                name="submit_1766823342650" id="submit_1766823342650" value="确定"><input class="ta_btn"
-                                type="button" id="closeBtn_1766823342650" value="取消"></div>
-                          </div>
-                        </div>
-                      </body>
-
-                      </html>
-                    </template>
-                    <link rel="stylesheet" href="basic_data_files/basic_data_sun.css">
-                  </wujie-app></div>
-              </div><!----><!---->
+                    </html>
+                  </template>
+                  <link rel="stylesheet" href="basic_data_files/basic_data_sun.css">
+                </wujie-app></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="footer" class="blur_row foot">
-      <ul data-v-40d52d64="" class="links ft" data-component="Footer">
-        <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64="" href="http://www.tencent.com/zh-cn/index.shtml"
-            target="_blank" data-msgid="关于腾讯" data-current-language="zh_CN">关于腾讯</a></li>
-        <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64=""
-            href="https://mp.weixin.qq.com/wxopen/wawiki?action=dir_list&amp;path=introduction/index&amp;token=1176097902&amp;lang=zh_CN"
-            target="_blank" data-msgid="文档中心" data-current-language="zh_CN">文档中心</a></li>
-        <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64=""
-            href="https://mp.weixin.qq.com/webpoc/ruleCenter?type=mp" target="_blank" data-msgid="规则中心"
-            data-current-language="zh_CN">规则中心</a></li>
-        <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64="" href="http://kf.qq.com/product/wx_xcx.html"
-            target="_blank" data-msgid="客服中心" data-current-language="zh_CN">客服中心</a></li>
-        <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64=""
-            href="https://mp.weixin.qq.com/acct/infringement?action=getmanual&amp;t=infringement/manual&amp;type=1&amp;token=1176097902&amp;lang=zh_CN"
-            target="_blank" class="weui-desktop-link" data-msgid="侵权投诉" data-current-language="zh_CN">侵权投诉</a></li>
-        <li data-v-40d52d64="" class="links_item">
-          <p data-v-40d52d64="" class="copyright">Copyright © 2012-2025 Tencent. All Rights Reserved.</p>
-        </li>
-      </ul>
-    </div><!---->
-    <div data-v-f5b26a8e="" class="switch_account_dialog" data-component="SwitchAccount" style="display: none;">
-      <div data-v-f5b26a8e="" class="switch_account_panel">
-        <div data-v-f5b26a8e="" class="switch_account_panel_header"><span data-v-f5b26a8e=""
-            data-component="translate">切换账号</span><img data-v-f5b26a8e=""
-            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAuMDEgOC45OTZsNy45MjItNy45MjJjLjA4Ni0uMDg2LjA4NS0uMjEuMDA4LS4yODlsLS43My0uNzNjLS4wNzUtLjA3NC0uMjA4LS4wNzUtLjI5LjAwN0w5IDcuOTg0IDEuMDc3LjA2MkMuOTk1LS4wMi44NjMtLjAxOS43ODguMDU1bC0uNzMuNzNjLS4wNzguMDc4LS4wNzkuMjAzLjAwNy4yOWw3LjkyMiA3LjkyLTcuOTIyIDcuOTIyYy0uMDg2LjA4Ni0uMDg1LjIxMi0uMDA3LjI5bC43My43M2MuMDc1LjA3NC4yMDcuMDc0LjI5LS4wMDhsNy45Mi03LjkyMSA3LjkyMiA3LjkyMWMuMDgyLjA4Mi4yMTUuMDgyLjI5LjAwOGwuNzMtLjczYy4wNzctLjA3OC4wNzgtLjIwNC0uMDA4LS4yOWwtNy45MjEtNy45MjF6IiBmaWxsPSIjNEM0RDRFIj48L3BhdGg+PC9zdmc+"
-            alt="关闭" class="close_icon"></div>
-        <div data-v-f5b26a8e="" class="account_list">
-          <div data-v-f5b26a8e="" class="platform_title">
-            小程序
-          </div>
-          <div data-v-f5b26a8e="" class="account_item account_item_gap">
-            <div data-v-f5b26a8e="" class="account_item_info"><img data-v-f5b26a8e="" src="./basic_data_files/0(1)"
-                alt="logo" class="account_item_logo">
-              <div data-v-f5b26a8e="" class="account_item_detail">
-                <div data-v-f5b26a8e="" class="account_name_detail"><span data-v-f5b26a8e=""
-                    class="account_name">撸铁铁</span><span data-v-f5b26a8e="" class="current_login"><span
-                      data-v-f5b26a8e="" data-component="translate">当前登录</span></span>
-                  <div data-v-f5b26a8e="" class="loading" style="display: none;"><span data-v-f5b26a8e=""
-                      data-component="translate">正在登录</span><img data-v-f5b26a8e=""
-                      src="./basic_data_files/switch_account_loading_65fe4e.svg" alt="loading" class="loading_icon">
-                  </div>
+  </div>
+  <div id="footer" class="blur_row foot">
+    <ul data-v-40d52d64="" class="links ft" data-component="Footer">
+      <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64="" href="http://www.tencent.com/zh-cn/index.shtml"
+          target="_blank" data-msgid="关于腾讯" data-current-language="zh_CN">关于腾讯</a></li>
+      <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64=""
+          href="https://mp.weixin.qq.com/wxopen/wawiki?action=dir_list&amp;path=introduction/index&amp;token=1176097902&amp;lang=zh_CN"
+          target="_blank" data-msgid="文档中心" data-current-language="zh_CN">文档中心</a></li>
+      <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64=""
+          href="https://mp.weixin.qq.com/webpoc/ruleCenter?type=mp" target="_blank" data-msgid="规则中心"
+          data-current-language="zh_CN">规则中心</a></li>
+      <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64="" href="http://kf.qq.com/product/wx_xcx.html"
+          target="_blank" data-msgid="客服中心" data-current-language="zh_CN">客服中心</a></li>
+      <li data-v-40d52d64="" class="links_item"><a data-v-40d52d64=""
+          href="https://mp.weixin.qq.com/acct/infringement?action=getmanual&amp;t=infringement/manual&amp;type=1&amp;token=1176097902&amp;lang=zh_CN"
+          target="_blank" class="weui-desktop-link" data-msgid="侵权投诉" data-current-language="zh_CN">侵权投诉</a></li>
+      <li data-v-40d52d64="" class="links_item">
+        <p data-v-40d52d64="" class="copyright">Copyright © 2012-2025 Tencent. All Rights Reserved.</p>
+      </li>
+    </ul>
+  </div><!---->
+  <div data-v-f5b26a8e="" class="switch_account_dialog" data-component="SwitchAccount" style="display: none;">
+    <div data-v-f5b26a8e="" class="switch_account_panel">
+      <div data-v-f5b26a8e="" class="switch_account_panel_header"><span data-v-f5b26a8e=""
+          data-component="translate">切换账号</span><img data-v-f5b26a8e=""
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxOCAxOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAuMDEgOC45OTZsNy45MjItNy45MjJjLjA4Ni0uMDg2LjA4NS0uMjEuMDA4LS4yODlsLS43My0uNzNjLS4wNzUtLjA3NC0uMjA4LS4wNzUtLjI5LjAwN0w5IDcuOTg0IDEuMDc3LjA2MkMuOTk1LS4wMi44NjMtLjAxOS43ODguMDU1bC0uNzMuNzNjLS4wNzguMDc4LS4wNzkuMjAzLjAwNy4yOWw3LjkyMiA3LjkyLTcuOTIyIDcuOTIyYy0uMDg2LjA4Ni0uMDg1LjIxMi0uMDA3LjI5bC43My43M2MuMDc1LjA3NC4yMDcuMDc0LjI5LS4wMDhsNy45Mi03LjkyMSA3LjkyMiA3LjkyMWMuMDgyLjA4Mi4yMTUuMDgyLjI5LjAwOGwuNzMtLjczYy4wNzctLjA3OC4wNzgtLjIwNC0uMDA4LS4yOWwtNy45MjEtNy45MjF6IiBmaWxsPSIjNEM0RDRFIj48L3BhdGg+PC9zdmc+"
+          alt="关闭" class="close_icon"></div>
+      <div data-v-f5b26a8e="" class="account_list">
+        <div data-v-f5b26a8e="" class="platform_title">
+          小程序
+        </div>
+        <div data-v-f5b26a8e="" class="account_item account_item_gap">
+          <div data-v-f5b26a8e="" class="account_item_info"><img data-v-f5b26a8e="" src="./basic_data_files/0(1)"
+              alt="logo" class="account_item_logo">
+            <div data-v-f5b26a8e="" class="account_item_detail">
+              <div data-v-f5b26a8e="" class="account_name_detail"><span data-v-f5b26a8e=""
+                  class="account_name">撸铁铁</span><span data-v-f5b26a8e="" class="current_login"><span data-v-f5b26a8e=""
+                    data-component="translate">当前登录</span></span>
+                <div data-v-f5b26a8e="" class="loading" style="display: none;"><span data-v-f5b26a8e=""
+                    data-component="translate">正在登录</span><img data-v-f5b26a8e=""
+                    src="./basic_data_files/switch_account_loading_65fe4e.svg" alt="loading" class="loading_icon">
                 </div>
-                <div data-v-f5b26a8e="" class="account_email line_ellipsis">gh_e81a4282be6d</div>
               </div>
+              <div data-v-f5b26a8e="" class="account_email line_ellipsis">gh_e81a4282be6d</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   <script src="./basic_data_files/TCaptcha.js"></script>
   <!-- <script type="text/javascript" src="./basic_data_files/styles.6161aa8e537d673a1d74.js"></script> -->
@@ -1513,6 +636,71 @@
         getContentContainer();
       }, 500);
 
+      // 获取主内容容器（首页内容容器）
+      function getMainContentContainer() {
+        return document.querySelector('#main-content-container');
+      }
+
+      // 设置首页菜单选中状态
+      function setIndexMenuSelected() {
+        const indexLink = document.querySelector('a[data-menu-item="index"]');
+        if (indexLink) {
+          const menuTitle = indexLink.closest('.menu_title');
+          if (menuTitle) {
+            // 移除其他菜单的选中状态
+            document.querySelectorAll('.menu_title').forEach(function (title) {
+              title.classList.remove('selected');
+            });
+            document.querySelectorAll('.menu_item').forEach(function (item) {
+              item.classList.remove('selected');
+            });
+            menuTitle.classList.add('selected');
+          }
+        }
+      }
+
+      // 加载首页内容
+      function loadIndexContent() {
+        const mainContainer = getMainContentContainer();
+        if (!mainContainer) {
+          console.error('找不到主内容容器');
+          return;
+        }
+
+        fetch('basic_data_files/index_content.html')
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error('HTTP error! status: ' + response.status);
+            }
+            return response.text();
+          })
+          .then(function (html) {
+            mainContainer.innerHTML = '<div data-component="index">' + html + '</div>';
+            // 设置首页菜单为选中状态
+            setIndexMenuSelected();
+          })
+          .catch(function (error) {
+            console.error('加载首页内容失败:', error);
+          });
+      }
+
+      // 首页内容动态加载
+      const indexLink = document.querySelector('a[data-menu-item="index"]');
+      if (indexLink) {
+        indexLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          // 清空基础数据的内容
+          clearContentContainer();
+          // 加载首页内容
+          loadIndexContent();
+        });
+      }
+
+      // 页面加载时默认加载首页内容
+      setTimeout(function () {
+        loadIndexContent();
+      }, 300);
+
       // 基础数据内容动态加载
       const basicDataLink = document.querySelector('a[data-menu-item="basic-data"]');
 
@@ -1520,6 +708,16 @@
         // 点击"基础数据"时加载内容
         basicDataLink.addEventListener('click', function (e) {
           e.preventDefault();
+
+          // 清空首页内容
+          const mainContainer = getMainContentContainer();
+          if (mainContainer) {
+            mainContainer.innerHTML = '';
+          }
+          // 移除首页的选中状态
+          document.querySelectorAll('.menu_title').forEach(function (title) {
+            title.classList.remove('selected');
+          });
 
           // 展开菜单（如果折叠的话）
           const menu = this.closest('.menu');
@@ -1620,13 +818,21 @@
         }
       }
 
-      // 所有菜单项点击事件（除了基础数据，因为已经有专门的处理）
+      // 所有菜单项点击事件（除了基础数据和首页，因为已经有专门的处理）
       const allMenuLinks = document.querySelectorAll('.menu_item a[href="javascript:;"]:not([data-menu-item])');
       allMenuLinks.forEach(function (link) {
         link.addEventListener('click', function (e) {
           e.preventDefault();
-          // 点击其他菜单项时，清空基础数据的内容
+          // 点击其他菜单项时，清空基础数据和首页的内容
           clearContentContainer();
+          const mainContainer = getMainContentContainer();
+          if (mainContainer) {
+            mainContainer.innerHTML = '';
+          }
+          // 移除首页的选中状态
+          document.querySelectorAll('.menu_title').forEach(function (title) {
+            title.classList.remove('selected');
+          });
           updateMenuSelection(this);
         });
       });
