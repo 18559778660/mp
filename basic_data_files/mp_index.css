@@ -347,3 +347,80 @@
 .data-overview__time[data-v-4f7fa66e] {
     margin-top: 8px;
 }
+
+.main_bd {
+    padding-bottom: 30px;
+}
+
+.main_bd {
+    padding: 20px 0 40px;
+}
+
+.main_bd.home {
+    padding-top: 0;
+}
+
+.mod_default_box {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(150, 150, 150, 0.3);
+    padding: 30px 30px;
+}
+
+.mod_default_box {
+    margin-bottom: 30px;
+}
+
+.mod_default_hd {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.mod_default_hd h4 {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.mod_default_hd .mod_hd_extra {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 32px;
+}
+
+.mod_default_hd .mod_hd_desc {
+    display: inline-block;
+}
+
+.mod_default_hd .desc {
+    display: inline-block;
+    color: #9a9a9a;
+}
+
+.mod_hd_extra .desc {
+    margin-right: 0.5em;
+}
+
+.mod_hd_extra .btn+.btn {
+    margin-left: 4px;
+}
+
+.mod_default_hd .mod_hd_extra {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 32px;
+}
+
+.mod_hd_extra .desc {
+    margin-right: 0.5em;
+}
+
+.mod_hd_extra .btn+.btn {
+    margin-left: 4px;
+}
