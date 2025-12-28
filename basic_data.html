@@ -994,6 +994,32 @@
           });
         });
 
+        // Table-toggle 点击展开/收起功能
+        const tableToggles = container.querySelectorAll('.table-toggle');
+        tableToggles.forEach(function (toggle) {
+          toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // 找到对应的 table_warp 元素
+            const tableContainer = this.closest('.table-container');
+            if (tableContainer) {
+              const tableWarp = tableContainer.querySelector('.table_warp');
+              if (tableWarp) {
+                // 切换显示/隐藏状态
+                const isHidden = tableWarp.style.display === 'none';
+                if (isHidden) {
+                  tableWarp.style.display = '';
+                  this.textContent = '↑收起详细数据';
+                } else {
+                  tableWarp.style.display = 'none';
+                  this.textContent = '↓展开详细数据';
+                }
+              }
+            }
+          });
+        });
+
         // Tab导航点击选中功能
         const tabNavs = container.querySelectorAll('.tab_nav');
         tabNavs.forEach(function (tabNav) {
