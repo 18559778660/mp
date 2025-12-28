@@ -972,10 +972,20 @@
             e.stopPropagation();
 
             // 找到同一组的所有 capsule-tab
+            // 优先查找 .capsule-box，如果没有则查找 .dateRange_container
             const capsuleBox = this.closest('.capsule-box');
+            const dateRangeContainer = this.closest('.dateRange_container');
+
             if (capsuleBox) {
               // 移除同一组内所有 tab 的 active 类
               capsuleBox.querySelectorAll('.capsule-tab').forEach(function (t) {
+                t.classList.remove('active');
+              });
+              // 给当前点击的 tab 添加 active 类
+              this.classList.add('active');
+            } else if (dateRangeContainer) {
+              // 处理日期范围的 capsule-tab
+              dateRangeContainer.querySelectorAll('.capsule-tab').forEach(function (t) {
                 t.classList.remove('active');
               });
               // 给当前点击的 tab 添加 active 类
