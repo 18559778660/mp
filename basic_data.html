@@ -983,6 +983,63 @@
             }
           });
         });
+
+        // Tab导航点击选中功能
+        const tabNavs = container.querySelectorAll('.tab_nav');
+        tabNavs.forEach(function (tabNav) {
+          tabNav.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 移除所有tab_nav的selected类
+            const tabNavsContainer = this.closest('.tab_navs');
+            if (tabNavsContainer) {
+              tabNavsContainer.querySelectorAll('.tab_nav').forEach(function (t) {
+                t.classList.remove('selected');
+              });
+              // 给当前点击的tab添加selected类
+              this.classList.add('selected');
+            }
+
+            // 获取tab文本内容
+            const tabText = this.querySelector('a') ? this.querySelector('a').textContent.trim() : '';
+            const mainBd = container.querySelector('.main_bd.minigame_refactor');
+
+            if (mainBd) {
+              // 根据tab加载不同内容
+              // container 就是 contentContainer，直接传递
+              if (tabText === '概况') {
+                loadTabContent('basic_data_files/summary.html', mainBd, container);
+              } else if (tabText === '访问分析') {
+                loadTabContent('basic_data_files/visit.html', mainBd, container);
+              } else {
+                // 其他tab清空内容
+                mainBd.innerHTML = '';
+              }
+            }
+          });
+        });
+      }
+
+      // 加载tab内容的函数
+      function loadTabContent(url, container, contentContainer) {
+        fetch(url)
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error('HTTP error! status: ' + response.status);
+            }
+            return response.text();
+          })
+          .then(function (html) {
+            container.innerHTML = html;
+            // 重新绑定事件（因为内容是新加载的）
+            if (contentContainer) {
+              bindTipsAndCapsuleTabEvents(contentContainer);
+            }
+          })
+          .catch(function (error) {
+            console.error('加载tab内容失败:', error);
+            container.innerHTML = '';
+          });
       }
 
       // 加载内容的函数
@@ -992,6 +1049,11 @@
           contentContainer.style.display = '';
           bindTipsAndCapsuleTabEvents(contentContainer);
           updateMenuSelection(basicDataLink);
+          // 确保默认加载概况内容
+          const mainBd = contentContainer.querySelector('.main_bd.minigame_refactor');
+          if (mainBd && mainBd.innerHTML.trim() === '') {
+            loadTabContent('basic_data_files/summary.html', mainBd, contentContainer);
+          }
           return;
         }
 
@@ -1006,6 +1068,13 @@
           .then(function (html) {
             contentContainer.innerHTML = html;
             contentContainer.style.display = '';
+
+            // 默认加载概况内容
+            const mainBd = contentContainer.querySelector('.main_bd.minigame_refactor');
+            if (mainBd) {
+              loadTabContent('basic_data_files/summary.html', mainBd, contentContainer);
+            }
+
             bindTipsAndCapsuleTabEvents(contentContainer);
             updateMenuSelection(basicDataLink);
           })
