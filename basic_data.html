@@ -907,11 +907,90 @@
         });
       }
 
+      // 绑定提示框、popover和capsule-tab事件
+      function bindTipsAndCapsuleTabEvents(container) {
+        if (!container) return;
+
+        // 关闭提示框功能
+        const tipsClose = container.querySelector('.tips-close');
+        if (tipsClose) {
+          tipsClose.addEventListener('click', function () {
+            const tipsWrap = this.closest('.tips-wrap');
+            if (tipsWrap) {
+              tipsWrap.style.display = 'none';
+            }
+          });
+        }
+
+        // Popover 鼠标悬浮显示/隐藏功能（问号图标）
+        const popoverIcons = container.querySelectorAll('.js_popover');
+        popoverIcons.forEach(function (icon) {
+          // 找到对应的 popover
+          const popoverContainer = icon.closest('.datacomponents-explanation, .mod_hd_extra');
+          if (popoverContainer) {
+            const popover = popoverContainer.querySelector('.popover');
+            if (popover) {
+              // 鼠标悬浮时显示
+              icon.addEventListener('mouseenter', function () {
+                // 先隐藏所有其他的 popover
+                container.querySelectorAll('.popover').forEach(function (p) {
+                  p.style.display = 'none';
+                });
+                // 显示当前的 popover
+                popover.style.display = 'block';
+              });
+
+              // 鼠标移出时隐藏（从图标或popover移出都隐藏）
+              const hidePopover = function () {
+                popover.style.display = 'none';
+              };
+
+              icon.addEventListener('mouseleave', function (e) {
+                // 检查鼠标是否移动到 popover 上
+                const relatedTarget = e.relatedTarget;
+                if (!popover.contains(relatedTarget)) {
+                  hidePopover();
+                }
+              });
+
+              popover.addEventListener('mouseleave', function (e) {
+                // 检查鼠标是否移动到图标上
+                const relatedTarget = e.relatedTarget;
+                if (!icon.contains(relatedTarget) && !popoverContainer.contains(relatedTarget)) {
+                  hidePopover();
+                }
+              });
+            }
+          }
+        });
+
+        // Capsule-tab 点击选中功能
+        const capsuleTabs = container.querySelectorAll('.capsule-tab');
+        capsuleTabs.forEach(function (tab) {
+          tab.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // 找到同一组的所有 capsule-tab
+            const capsuleBox = this.closest('.capsule-box');
+            if (capsuleBox) {
+              // 移除同一组内所有 tab 的 active 类
+              capsuleBox.querySelectorAll('.capsule-tab').forEach(function (t) {
+                t.classList.remove('active');
+              });
+              // 给当前点击的 tab 添加 active 类
+              this.classList.add('active');
+            }
+          });
+        });
+      }
+
       // 加载内容的函数
       function loadContent(contentContainer) {
         // 如果内容已加载，只显示并更新选中状态
         if (contentContainer.innerHTML.trim() !== '' && contentContainer.children.length > 0) {
           contentContainer.style.display = '';
+          bindTipsAndCapsuleTabEvents(contentContainer);
           updateMenuSelection(basicDataLink);
           return;
         }
@@ -927,6 +1006,7 @@
           .then(function (html) {
             contentContainer.innerHTML = html;
             contentContainer.style.display = '';
+            bindTipsAndCapsuleTabEvents(contentContainer);
             updateMenuSelection(basicDataLink);
           })
           .catch(function (error) {
