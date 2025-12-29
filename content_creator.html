@@ -1261,11 +1261,11 @@
                                             </div>
                                             <div aria-disabled="false" aria-selected="true"
                                                 class="adui-tabs-tab adui-tabs-active" role="tab" tabindex="-1"
-                                                style="padding: 10px;"><a href="content_creator.html">概览</a>
+                                                style="padding: 10px;"><a href="javascript:;">概览</a>
                                             </div>
                                             <div aria-disabled="false" aria-selected="false" class="adui-tabs-tab"
                                                 role="tab" tabindex="-1" style="padding: 10px;"><a
-                                                    href="ad.html">广告管理</a>
+                                                    href="javascript:;">广告管理</a>
                                             </div>
                                             <div aria-disabled="false" aria-selected="false" class="adui-tabs-tab"
                                                 role="tab" tabindex="-1" style="padding: 10px;"><a
@@ -1633,7 +1633,10 @@
                     const link = tab.querySelector('a');
                     if (link) {
                         link.addEventListener('click', function (e) {
-                            const tabText = link.textContent.trim();
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            const tabText = this.textContent.trim();
 
                             // 移除所有标签的选中状态
                             tabs.forEach(function (t) {
@@ -1645,12 +1648,15 @@
                             tab.classList.add('adui-tabs-active');
                             tab.setAttribute('aria-selected', 'true');
 
-                            // 如果是"广告管理"，跳转到 ad.html
-                            if (tabText === '广告管理') {
+                            // 根据不同标签执行不同操作
+                            if (tabText === '概览') {
+                                // 刷新当前页面
+                                window.location.reload();
+                            } else if (tabText === '广告管理') {
+                                // 跳转到 ad.html
                                 window.location.href = 'ad.html';
                             } else {
                                 // 其他标签清空内容区域
-                                e.preventDefault();
                                 if (contentArea) {
                                     contentArea.innerHTML = '';
                                 }
