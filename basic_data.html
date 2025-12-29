@@ -1180,6 +1180,16 @@
           }
         }
       });
+
+      // 检查URL参数，如果是从其他页面跳转过来需要触发基础数据点击
+      const urlParams = new URLSearchParams(window.location.search);
+      const menuParam = urlParams.get('menu');
+      if (menuParam === 'basic-data' && basicDataLink) {
+        // 延迟一下确保DOM完全加载
+        setTimeout(function () {
+          basicDataLink.click();
+        }, 100);
+      }
     });
   </script>
 </body>
