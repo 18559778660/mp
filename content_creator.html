@@ -1363,6 +1363,15 @@
                     if (contentContainer2) {
                         loadTabContent('content_creator_files/data_statistics2.html', contentContainer2);
                     }
+                } else if (tabText === '合作计划') {
+                    // 加载合作计划内容
+                    if (contentContainer) {
+                        loadTabContent('content_creator_files/cooperation.html', contentContainer);
+                    }
+                    // 清空第二个容器
+                    if (contentContainer2) {
+                        contentContainer2.innerHTML = '';
+                    }
                 } else {
                     // 其他标签清空内容区域
                     if (contentContainer) {
