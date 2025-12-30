@@ -1381,6 +1381,15 @@
                     if (contentContainer2) {
                         contentContainer2.innerHTML = '';
                     }
+                } else if (tabText === '公告消息') {
+                    // 加载公告消息内容
+                    if (contentContainer) {
+                        loadTabContent('content_creator_files/notice.html', contentContainer);
+                    }
+                    // 清空第二个容器
+                    if (contentContainer2) {
+                        contentContainer2.innerHTML = '';
+                    }
                 } else {
                     // 其他标签清空内容区域
                     if (contentContainer) {
