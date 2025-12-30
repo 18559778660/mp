@@ -1256,6 +1256,7 @@
                                         </div>
                                     </div>
                                     <div id="tab-content-container"></div>
+                                    <div id="tab-content-container-2"></div>
                                 </div>
                             </div>
                         </div>
@@ -1317,6 +1318,7 @@
 
                 const tabs = tabContainer.querySelectorAll('.adui-tabs-tab');
                 const contentContainer = document.getElementById('tab-content-container');
+                const contentContainer2 = document.getElementById('tab-content-container-2');
 
                 // 移除所有标签的选中状态
                 tabs.forEach(function (t) {
@@ -1339,15 +1341,35 @@
                     if (contentContainer) {
                         loadTabContent('content_creator_files/overview.html', contentContainer);
                     }
+                    // 清空第二个容器
+                    if (contentContainer2) {
+                        contentContainer2.innerHTML = '';
+                    }
                 } else if (tabText === '广告管理') {
                     // 加载广告管理内容
                     if (contentContainer) {
                         loadTabContent('content_creator_files/ad.html', contentContainer);
                     }
+                    // 清空第二个容器
+                    if (contentContainer2) {
+                        contentContainer2.innerHTML = '';
+                    }
+                } else if (tabText === '数据统计') {
+                    // 加载数据统计内容
+                    if (contentContainer) {
+                        loadTabContent('content_creator_files/data_statistics.html', contentContainer);
+                    }
+                    // 加载数据统计的第二个内容到同级容器
+                    if (contentContainer2) {
+                        loadTabContent('content_creator_files/data_statistics2.html', contentContainer2);
+                    }
                 } else {
                     // 其他标签清空内容区域
                     if (contentContainer) {
                         contentContainer.innerHTML = '';
+                    }
+                    if (contentContainer2) {
+                        contentContainer2.innerHTML = '';
                     }
                 }
             }
