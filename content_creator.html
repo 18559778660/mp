@@ -1210,23 +1210,6 @@
             <div class="col_main">
                 <div class="col_main_inner">
                     <div id="_js_announcement"></div>
-
-                    <script type="text/html" id="_js_announcement_tpl">
-{each announcement_list as item i}
-<div class="page_msg announcement_msg mini{if item.type === 0} with_closed{/if}">
-  <div class="inner">
-    <span class="msg_icon_wrp"><i class="icon_msg_mini {if item.type === 0}info{else}warn{/if}"></i></span>
-    <div class="msg_content">
-      <p>{=item.content}</p>
-    </div>
-    {if item.type === 0}
-      <span class="msg_closed js_msg_close">关闭</span>
-    {/if}
-  </div>
-</div>
-{/each}
-</script>
-
                     <script type="text/javascript"> document.domain = "mp.weixin.qq.com" </script>
                     <div class="main_hd">
                         <h2>流量主</h2>
