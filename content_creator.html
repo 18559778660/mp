@@ -1372,6 +1372,15 @@
                     if (contentContainer2) {
                         contentContainer2.innerHTML = '';
                     }
+                } else if (tabText === '权限管理') {
+                    // 加载权限管理内容
+                    if (contentContainer) {
+                        loadTabContent('content_creator_files/permission.html', contentContainer);
+                    }
+                    // 清空第二个容器
+                    if (contentContainer2) {
+                        contentContainer2.innerHTML = '';
+                    }
                 } else {
                     // 其他标签清空内容区域
                     if (contentContainer) {
